@@ -67,10 +67,10 @@ namespace Calisma12_MetodAndFunc
             if (sayilar.Length == 0)
                 return p;
             for (int i = 0; i < sayilar.Length; ++i)
-            squrate[i]=Math.Sqrt(sayilar[i]);
+                squrate[i] = Math.Sqrt(sayilar[i]);
             return squrate;
         }
-        
+
         public static void Yaz(BICIM b, params object[] nesne)
         {
             if (nesne.Length == 0)
@@ -82,70 +82,16 @@ namespace Calisma12_MetodAndFunc
                 foreach (object o in nesne)
                     Console.WriteLine(o.ToString());
         }
+        public static int Faktoriel(int a)
+        {
+            if (a == 0)
+                return 1;
+            return a * Faktoriel(a - 1);
+        }
 
 
 
 
     }
-    // class Program
-    // {
-    //     public int IlkMetot(int a, int b)
-    //     {
-    //         return a + b;
-    //     }
-    //     static int IlkMetot1(int a, int b)
-    //     {
-    //         return a + b;
-    //     }
-    //     static void Yaz(object a)
-    //     {
-    //         Console.WriteLine(a.ToString());
-    //     }
 
-    //     static void Main(string[] args)
-    //     {
-    //         Console.WriteLine("Hello World!");
-    //         Program p = new Program();
-    //         int sonuc = p.IlkMetot(5, 3);
-    //         int sonuc1 = IlkMetot1(5, 3);
-    //         // Console.WriteLine(sonuc);
-    //         // Console.WriteLine(sonuc1);
-    //         // Console.WriteLine(sonuc+sonuc1);
-    //         int total = IlkMetot1(6, 9) + p.IlkMetot(8, 7) + 10;
-    //         Yaz(sonuc);
-    //         Yaz(sonuc1);
-    //         Yaz(total);
-    //         Yaz(sonuc1 + sonuc);
-    //         Helper.Yaz(total);
-    //         Helper.Yaz(10, sonuc, 10.25f);
-
-    //         Yaz(Helper.EnBuyuk2(5, 4));
-
-    //         int sayi1, sayi2, sayi3;
-
-    //         Yaz("Sayıları Giriniz");
-    //         sayi1 = Convert.ToInt32(Console.ReadLine());
-    //         sayi2 = Convert.ToInt32(Console.ReadLine());
-
-    //         int max = Helper.EnBuyuk2(sayi1, sayi2);
-
-    //         Console.WriteLine("En büyük sayı :{0}", max);
-
-    //         Yaz("Sayıları Giriniz");
-    //         sayi1 = Convert.ToInt32(Console.ReadLine());
-    //         sayi2 = Convert.ToInt32(Console.ReadLine());
-    //         sayi3 = Convert.ToInt32(Console.ReadLine());
-
-    //         int max1 = Helper.EnBuyuk3(sayi1, sayi2, sayi3);
-
-    //         Console.WriteLine("Girilen 3 sayıdan en büyük sayı :{0}", max1);
-
-    //         int[] dizi = { 1, 2, 3, 4, 5, 6, 7, 9 };
-    //         Helper.DiziYaz(dizi, BICIM.YATAY);
-
-
-
-
-    //     }
-    // }
 }
