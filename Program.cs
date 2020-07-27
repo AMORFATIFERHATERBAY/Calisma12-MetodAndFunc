@@ -54,24 +54,24 @@ namespace Calisma12_MetodAndFunc
 
             Yaz(Helper.EnBuyuk2(5, 4));
 
-            // int sayi1, sayi2, sayi3;
+            int sayi11, sayi22, sayi33;
 
-            // Yaz("Sayıları Giriniz");
-            // sayi1 = Convert.ToInt32(Console.ReadLine());
-            // sayi2 = Convert.ToInt32(Console.ReadLine());
+            Yaz("Sayıları Giriniz");
+            sayi11 = Convert.ToInt32(Console.ReadLine());
+            sayi22 = Convert.ToInt32(Console.ReadLine());
 
-            // int max = Helper.EnBuyuk2(sayi1, sayi2);
+            int max = Helper.EnBuyuk2(sayi11, sayi22);
 
-            // Console.WriteLine("En büyük sayı :{0}", max);
+            Console.WriteLine("En büyük sayı :{0}", max);
 
-            // Yaz("Sayıları Giriniz");
-            // sayi1 = Convert.ToInt32(Console.ReadLine());
-            // sayi2 = Convert.ToInt32(Console.ReadLine());
-            // sayi3 = Convert.ToInt32(Console.ReadLine());
+            Yaz("Sayıları Giriniz");
+            sayi11 = Convert.ToInt32(Console.ReadLine());
+            sayi22 = Convert.ToInt32(Console.ReadLine());
+            sayi3 = Convert.ToInt32(Console.ReadLine());
 
-            // int max1 = Helper.EnBuyuk3(sayi1, sayi2, sayi3);
+            int max1 = Helper.EnBuyuk3(sayi11, sayi22, sayi33);
 
-            // Console.WriteLine("Girilen 3 sayıdan en büyük sayı :{0}", max1);
+            Console.WriteLine("Girilen 3 sayıdan en büyük sayı :{0}", max1);
 
             int[] dizi = { 1, 2, 3, 4, 5, 6, 7, 9 };
             Helper.DiziYaz(dizi, BICIM.YATAY);
@@ -148,7 +148,7 @@ namespace Calisma12_MetodAndFunc
             while (args.Length != 0)
             {
                 double[] sayilar = new double[args.Length];
-                for (int i = 0; i < args.Length; ++i)
+                for (int i = 1; i < args.Length; ++i)
                     sayilar[i] = Convert.ToDouble(args[i]); // Helper.KareKokBul((Convert.ToDouble($"{args[i]}")));
                 double[] bulunanKokler = Helper.KareKokBul(sayilar);
                 foreach (double kokler in bulunanKokler)
@@ -158,7 +158,53 @@ namespace Calisma12_MetodAndFunc
                 if (str1.ToLower() == "q")
                     break;
                 continue;
+            }
 
+            Console.WriteLine("1'den 10' a kadar olan sayıların fibonacci değerleri >>");
+            int fib = 0;
+            for (int i = 1; i <= 10; ++i)
+            {
+                fib = Helper.Fibonacci(i);
+                Console.WriteLine($"{i,4} ' n fibonacci değeri => {fib,4}");
+            }
+
+            if (args.Length == 1 || args.Length == 0 || args.Length == 2)
+                Console.WriteLine(">> Eksik argüman parametresi!");
+
+            if (args.Length > 3)
+                Console.WriteLine(">> Fazla argüman parametresi!");
+
+            string arg = args[0];
+            if (!(arg == "t" || arg == "c" || arg == "m" || arg == "b"))
+                Console.WriteLine(">> Yanlış işlem!");
+
+            int sayi1 = Convert.ToInt32(args[1]);
+            int sayi2 = Convert.ToInt32(args[2]);
+
+            switch (args[0])
+            {
+                case "t":
+                    Console.WriteLine("Sonuç : {0}", sayi1 + sayi2);
+                    break;
+                case "c":
+                    Console.WriteLine("Sonuç : {0}", sayi1 + sayi2);
+                    break;
+                case "m":
+                    Console.WriteLine("Sonuç : {0}", sayi1 * sayi2);
+                    break;
+                case "b":
+                    switch (sayi2)
+                    {
+                        case 0:
+                            Console.WriteLine("Bölen sıfır olamaz!");
+                            break;
+                        default:
+                            float sonuC = (float)sayi1 / (float)sayi2;
+                            Console.WriteLine("Sonuç : {0}", sonuC);
+                            break;
+                    }
+
+                    break;
             }
 
 

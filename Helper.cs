@@ -88,6 +88,14 @@ namespace Calisma12_MetodAndFunc
                 return 1;
             return a * Faktoriel(a - 1);
         }
+        public static int Fibonacci(int a)
+        {
+            if (a==0)
+            return 0;
+            if (a==1)
+            return 1;
+            return Fibonacci(a-1)+Fibonacci(a-2);
+        }
 
 
 
