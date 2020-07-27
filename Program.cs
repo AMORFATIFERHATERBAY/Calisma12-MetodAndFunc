@@ -67,7 +67,7 @@ namespace Calisma12_MetodAndFunc
             Yaz("Sayıları Giriniz");
             sayi11 = Convert.ToInt32(Console.ReadLine());
             sayi22 = Convert.ToInt32(Console.ReadLine());
-            sayi3 = Convert.ToInt32(Console.ReadLine());
+            sayi33 = Convert.ToInt32(Console.ReadLine());
 
             int max1 = Helper.EnBuyuk3(sayi11, sayi22, sayi33);
 
