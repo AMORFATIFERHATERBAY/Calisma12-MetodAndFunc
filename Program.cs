@@ -113,7 +113,25 @@ namespace Calisma12_MetodAndFunc
             Console.WriteLine();
             Helper.Yaz(BICIM.DIKEY,"\ndeneme",2,3,2.50,2.25f);
 
-            
+            int s = 0;
+            while (true)
+            {
+                Console.Write("Kökü Alınacak Sayıları giriniz >>");
+                string input = Console.ReadLine();
+                if (input.ToLower() == "q")
+                    break;
+                //float[] sayi = { Convert.ToSingle(input) };
+                float[] sayi = new float[s+1];
+                sayi[s] = Convert.ToSingle(input);
+                
+
+
+                double[] sayilarinKokleri = Helper.KareKokBul((Convert.ToDouble($"{sayi[s]}")));
+
+                foreach (double kok in sayilarinKokleri)
+                    Console.WriteLine($"{sayi[s]} kökü --> {kok}");
+                    s++;
+            }
 
 
 

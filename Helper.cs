@@ -60,6 +60,17 @@ namespace Calisma12_MetodAndFunc
             return power;
 
         }
+        public static double[] KareKokBul(params double[] sayilar)
+        {
+            double[] squrate = new double[sayilar.Length];
+            double[] p = { };
+            if (sayilar.Length == 0)
+                return p;
+            for (int i = 0; i < sayilar.Length; ++i)
+            squrate[i]=Math.Sqrt(sayilar[i]);
+            return squrate;
+        }
+        
         public static void Yaz(BICIM b, params object[] nesne)
         {
             if (nesne.Length == 0)
