@@ -147,10 +147,10 @@ namespace Calisma12_MetodAndFunc
 
             while (args.Length != 0)
             {
-                double[] sayilarinKokler = new double[args.Length];
+                double[] sayilar = new double[args.Length];
                 for (int i = 0; i < args.Length; ++i)
-                    sayilarinKokler[i] = Convert.ToDouble(args[i]); // Helper.KareKokBul((Convert.ToDouble($"{args[i]}")));
-                double[] istenilenKokler = Helper.KareKokBul(sayilarinKokler);
+                    sayilar[i] = Convert.ToDouble(args[i]); // Helper.KareKokBul((Convert.ToDouble($"{args[i]}")));
+                double[] istenilenKokler = Helper.KareKokBul(sayilar);
                 foreach (double kokler in istenilenKokler)
                     Console.WriteLine("Bulunan kökler >> " + kokler + " ");
                 Console.WriteLine("Çıkış için Q/q basınız.");
