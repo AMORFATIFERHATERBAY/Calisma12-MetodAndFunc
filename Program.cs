@@ -150,8 +150,8 @@ namespace Calisma12_MetodAndFunc
                 double[] sayilar = new double[args.Length];
                 for (int i = 0; i < args.Length; ++i)
                     sayilar[i] = Convert.ToDouble(args[i]); // Helper.KareKokBul((Convert.ToDouble($"{args[i]}")));
-                double[] istenilenKokler = Helper.KareKokBul(sayilar);
-                foreach (double kokler in istenilenKokler)
+                double[] bulunanKokler = Helper.KareKokBul(sayilar);
+                foreach (double kokler in bulunanKokler)
                     Console.WriteLine("Bulunan kökler >> " + kokler + " ");
                 Console.WriteLine("Çıkış için Q/q basınız.");
                 string str1 = Console.ReadLine();
